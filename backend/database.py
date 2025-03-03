@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ✅ Load database URL (print for debugging if needed)
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+asyncpg://postgres:your_secure_password@localhost/topspot40")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+asyncpg://postgres:Paty@1014@localhost/topspot40")
 
 # ✅ Create Async Engine
 engine = create_async_engine(DATABASE_URL, echo=True, future=True)

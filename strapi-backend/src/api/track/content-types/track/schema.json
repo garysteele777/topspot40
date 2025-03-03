@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tracks",
+  "info": {
+    "singularName": "track",
+    "pluralName": "tracks",
+    "displayName": "Track"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "rank": {
+      "type": "integer"
+    },
+    "trackName": {
+      "type": "string"
+    },
+    "artistName": {
+      "type": "string"
+    },
+    "yearReleased": {
+      "type": "integer"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "trackID": {
+      "type": "string"
+    },
+    "artistID": {
+      "type": "string"
+    },
+    "durationMS": {
+      "type": "integer"
+    },
+    "formatedDuration": {
+      "type": "string"
+    },
+    "albumArtwork": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "genre": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "tracks"
+    }
+  }
+}
